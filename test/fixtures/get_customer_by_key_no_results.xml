@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Header>
+        <AuthorizationToken xmlns="http://www.avectra.com/OnDemand/2005/">
+            <Token>a7d1d043-3b9f-4f69-9df7-db62f2b26349</Token>
+        </AuthorizationToken>
+    </soap:Header>
+    <soap:Body>
+        <GetCustomerByKeyResponse xmlns="http://www.avectra.com/OnDemand/2005/" />
+    </soap:Body>
+</soap:Envelope>

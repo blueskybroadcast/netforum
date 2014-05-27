@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Header>
+        <AuthorizationToken xmlns="http://www.avectra.com/OnDemand/2005/">
+            <Token>1c232094-1860-47ff-aa65-708c78ab0e4c</Token>
+        </AuthorizationToken>
+    </soap:Header>
+    <soap:Body>
+        <GetActiveProductListByIndividualResponse xmlns="http://www.avectra.com/OnDemand/2005/">
+            <GetActiveProductListByIndividualResult>
+                <Results userName="blueskyxweb" recordReturn="0" />
+            </GetActiveProductListByIndividualResult>
+        </GetActiveProductListByIndividualResponse>
+    </soap:Body>
+</soap:Envelope>

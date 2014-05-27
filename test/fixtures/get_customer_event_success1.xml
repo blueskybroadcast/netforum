@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Header>
+        <AuthorizationToken xmlns="http://www.avectra.com/OnDemand/2005/">
+            <Token>4c992871-7398-4f72-af6d-681f1a5a158f</Token>
+        </AuthorizationToken>
+    </soap:Header>
+    <soap:Body>
+        <GetCustomerEventResponse xmlns="http://www.avectra.com/OnDemand/2005/">
+            <GetCustomerEventResult>
+                <Results userName="xwebuser" recordReturn="1">
+                    <Result>
+                        <cst_key>dc52db55-65ac-4929-8d98-ce9f9a563ebd</cst_key>
+                        <CustomerType>Individual</CustomerType>
+                        <MemberFlag>1</MemberFlag>
+                        <SortName>Butcher Tammy</SortName>
+                        <CustomerID>000010</CustomerID>
+                        <reg_key>cf58a9c1-eb80-4b5a-b6d5-e8eebf6de004</reg_key>
+                        <reg_cst_key>dc52db55-65ac-4929-8d98-ce9f9a563ebd</reg_cst_key>
+                        <reg_evt_key>ee692f2e-b470-4cfe-a8e6-85431aaea78d</reg_evt_key>
+                        <reg_trx_key>c95bb8f8-6a30-4fbf-91a9-ee45b0e97db5</reg_trx_key>
+                        <reg_efe_key>d40a717e-9e4e-44a6-b2f6-ffb9dab8e1ff</reg_efe_key>
+                        <reg_registration_date>9/8/2009 12:00:00 AM</reg_registration_date>
+                        <reg_badge_name>Tammy</reg_badge_name>
+                        <reg_badge_org_name>National Association of Technical Writers</reg_badge_org_name>
+                        <reg_badge_title>Documentation Manager</reg_badge_title>
+                        <reg_badge_city>Herndon</reg_badge_city>
+                        <reg_badge_state>VA</reg_badge_state>
+                        <reg_badge_country>United States</reg_badge_country>
+                        <reg_badge_print_date />
+                        <reg_badge_reprint>0</reg_badge_reprint>
+                        <reg_ribbon_codes />
+                        <reg_special_instructions />
+                        <reg_pref_comm_meth />
+                        <reg_rgt_key />
+                        <reg_confirm_date>9/8/2009 3:18:17 PM</reg_confirm_date>
+                        <reg_attendance_flag>1</reg_attendance_flag>
+                        <reg_ft_attendee_flag>0</reg_ft_attendee_flag>
+                        <reg_cancel_date />
+                        <reg_cancel_reason />
+                        <reg_cancel_flag>0</reg_cancel_flag>
+                        <reg_guest>0</reg_guest>
+                        <reg_custom_flag_01>0</reg_custom_flag_01>
+                        <reg_custom_flag_02>0</reg_custom_flag_02>
+                        <reg_custom_flag_14>0</reg_custom_flag_14>
+                        <reg_custom_flag_15>0</reg_custom_flag_15>
+                        <reg_custom_date_01 />
+                        <reg_custom_date_14 />
+                        <reg_custom_date_15 />
+                        <reg_custom_currency_01>0.0000</reg_custom_currency_01>
+                        <reg_custom_currency_02>0.0000</reg_custom_currency_02>
+                        <reg_custom_currency_15>0.0000</reg_custom_currency_15>
+                        <reg_custom_integer_01 />
+                        <reg_custom_integer_02 />
+                        <reg_custom_integer_15 />
+                        <reg_custom_string_01 />
+                        <reg_custom_string_02 />
+                        <reg_custom_string_15 />
+                        <reg_custom_text_01 />
+                        <reg_custom_text_15 />
+                        <reg_add_user>tbutcher2</reg_add_user>
+                        <reg_add_date>9/8/2009 3:18:22 PM</reg_add_date>
+                        <reg_change_user />
+                        <reg_change_date />
+                        <reg_delete_flag>0</reg_delete_flag>
+                        <reg_entity_key>b6142174-cae3-4fc6-8c45-4785d560f37b</reg_entity_key>
+                        <reg_badge_firstname>Tammy</reg_badge_firstname>
+                        <reg_badge_lastname>Butcher</reg_badge_lastname>
+                        <reg_waitlist_flag>0</reg_waitlist_flag>
+                        <reg_score />
+                        <reg_grade />
+                        <reg_subst_reg_key />
+                        <reg_subst_date />
+                        <reg_registered_by_cst_key />
+                        <reg_group_reg_trx_key />
+                        <reg_examid />
+                        <evt_key>ee692f2e-b470-4cfe-a8e6-85431aaea78d</evt_key>
+                        <evt_prd_key>669f3f1e-0a96-44a4-8f11-59ac0b842371</evt_prd_key>
+                        <evt_etp_key>cb26d787-47b9-4737-9369-dddcac9e39dd</evt_etp_key>
+                        <evt_etc_key>455ed934-5d31-4e71-b121-61a76af8e199</evt_etc_key>
+                        <evt_goal />
+                        <evt_estimated_attendance />
+                        <evt_start_date>6/1/2010 12:00:00 AM</evt_start_date>
+                        <evt_start_time>9:00am</evt_start_time>
+                        <evt_end_date>6/3/2010 12:00:00 AM</evt_end_date>
+                        <evt_end_time>6:00pm</evt_end_time>
+                        <evt_tzn_key>059930c3-7d4e-46d9-8a59-e3c95a2a19cd</evt_tzn_key>
+                        <evt_standard_registration_start_date>4/1/2010 12:00:00
+                   AM</evt_standard_registration_start_date>
+                        <evt_standard_registration_end_date>5/3/2010
+                   12:00:00 AM</evt_standard_registration_end_date>
+                        <evt_event_url />
+                        <evt_post_speaker_staff_info_online />
+                        <evt_speaker_staff_html />
+                        <evt_post_instructions_online />
+                        <evt_instructions_html />
+                        <evt_post_location_online />
+                        <evt_location_html />
+                        <evt_post_sponsor_online />
+                        <evt_sponsor_html />
+                        <evt_cct_key>0bd55632-5e6d-486e-9cba-91366261d828</evt_cct_key>
+                        <evt_confirmation_htm />
+                        <evt_free_flag>0</evt_free_flag>
+                        <evt_conf_body />
+                        <evt_conf_body_2 />
+                        <evt_conf_signature />
+                        <evt_conf_post_script />
+                        <evt_guest_registration>1</evt_guest_registration>
+                        <evt_custom_flag_01>0</evt_custom_flag_01>
+                        <evt_custom_flag_02>0</evt_custom_flag_02>
+                        <evt_custom_flag_15>0</evt_custom_flag_15>
+                        <evt_custom_date_01 />
+                        <evt_custom_date_15 />
+                        <evt_custom_currency_01 />
+                        <evt_custom_currency_15 />
+                        <evt_custom_integer_01 />
+                        <evt_custom_integer_15 />
+                        <evt_custom_string_01 />
+                        <evt_custom_string_15 />
+                        <evt_custom_text_01 />
+                        <evt_custom_text_02 />
+                        <evt_custom_text_15 />
+                        <evt_add_user>tbutcher2</evt_add_user>
+                        <evt_add_date>9/4/2009 11:51:06 AM</evt_add_date>
+                        <evt_change_user>tbutcher2</evt_change_user>
+                        <evt_change_date>11/10/2009 11:07:32  AM</evt_change_date>
+                        <evt_delete_flag>0</evt_delete_flag>
+                        <evt_entity_key>b6142174-cae3-4fc6-8c45-4785d560f37b</evt_entity_key>
+                        <evt_track_scores_flag>1</evt_track_scores_flag>
+                        <evt_allow_subst_flag>0</evt_allow_subst_flag>
+                        <evt_allow_group_reg_flag>1
+                  </evt_allow_group_reg_flag>
+                        <evt_group_reg_all_flag>1</evt_group_reg_all_flag>
+                        <evt_group_reg_pri_flag>1</evt_group_reg_pri_flag>
+                        <evt_group_reg_rlt_flag>0</evt_group_reg_rlt_flag>
+                        <evt_check_sessions_overlap_flag>0
+                  </evt_check_sessions_overlap_flag>
+                        <evt_show_online_fees_flag>1
+                  </evt_show_online_fees_flag>
+                        <etp_code>Conference</etp_code>
+                        <etp_code_detail />
+                        <etc_code>Technical</etc_code>
+                        <etc_category_detail />
+                        <prd_type>Event</prd_type>
+                        <prd_code>NATW_CONVENTION</prd_code>
+                        <prd_name>NATW Conference 2010</prd_name>
+                        <prd_part_number />
+                        <prd_description>Join industry experts at the leading Technical Communicator's conference in
+                   2010 for the National Association of Technical Writers conference!</prd_description>
+                        <efe_name>NATW CON 2010</efe_name>
+                        <early_ppr_code>NATW CON 2010-Early</early_ppr_code>
+                        <reg_ppr_code>NATW CON 2010-Reg.</reg_ppr_code>
+                        <late_ppr_code>NATW CON 2010-Late</late_ppr_code>
+                        <rgt_code />
+                        <trx_amount>600</trx_amount>
+                        <trx_quantity>1</trx_quantity>
+                        <trx_total>600</trx_total>
+                        <eml_address>tbutcher@.avectra.com</eml_address>
+                    </Result>
+                </Results>
+            </GetCustomerEventResult>
+        </GetCustomerEventResponse>
+    </soap:Body>
+</soap:Envelope>

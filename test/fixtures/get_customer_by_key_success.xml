@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Header>
+        <AuthorizationToken xmlns="http://www.avectra.com/OnDemand/2005/">
+            <Token>c86920d2-75d5-46f2-b347-5989fc3d17eb</Token>
+        </AuthorizationToken>
+    </soap:Header>
+    <soap:Body>
+        <GetCustomerByKeyResponse xmlns="http://www.avectra.com/OnDemand/2005/">
+            <GetCustomerByKeyResult>
+                <Results userName="blueskyxweb" recordReturn="1">
+                    <Result>
+                        <cst_key>ec8f7ac3-4a05-416d-9cf0-c447d4348c54</cst_key>
+                        <CustomerType>Individual</CustomerType>
+                        <MemberFlag>0</MemberFlag>
+                        <SortName>Doe John</SortName>
+                        <CustomerID>000020</CustomerID>
+                        <CstWebSite />
+                        <ProductCode />
+                        <ProductName />
+                        <Membership />
+                        <MemberStatus />
+                        <MemberJoinDate />
+                        <MemberRejoinDate />
+                        <MemberRenewDate />
+                        <MemberExpireDate />
+                        <MemberTerminationDate />
+                        <AddressLabel />
+                        <AddressType />
+                        <AddressPrimary />
+                        <AddressLine1 />
+                        <AddressLine2 />
+                        <AddressLine3 />
+                        <AddressCity />
+                        <AddressState />
+                        <AddressZip />
+                        <NoEmaiFlag>0</NoEmaiFlag>
+                        <NoPhoneFlag>0</NoPhoneFlag>
+                        <NoFaxFlag>0</NoFaxFlag>
+                        <NoWebFlag>0</NoWebFlag>
+                        <FaxType />
+                        <FaxNumber />
+                        <EmailType>Work</EmailType>
+                        <EmailAddress>john@doe.com</EmailAddress>
+                        <EmailUnlistedFlag>0</EmailUnlistedFlag>
+                        <PhoneType />
+                        <PhoneNumber />
+                        <IndividualTitle />
+                        <OrgAcronym />
+                        <OrgCode />
+                        <ParentOrgAcronym />
+                        <ParentOrgCode />
+                        <ParentOrgKey />
+                        <ParentOrgName />
+                        <OrgIndCstKey />
+                        <cst_receives_benefits_flag>0</cst_receives_benefits_flag>
+                        <mbr_flow_from_cst_key />
+                        <mbr_flow_from_mbt_key />
+                        <ind_first_name>John</ind_first_name>
+                        <ind_last_name>Doe</ind_last_name>
+                        <ind_title />
+                        <cst_member_flag>0</cst_member_flag>
+                        <adr_line1 />
+                        <adr_city />
+                        <adr_state />
+                        <adr_post_code />
+                        <adr_country />
+                        <ind_dob />
+                        <cst_org_name_dn />
+                        <cst_id>000020</cst_id>
+                        <ind_chapter_affiliate />
+                        <org_chapter_affiliate />
+                        <ThePortScreenName />
+                        <TwitterName />
+                        <ind_dob />
+                        <RecordDate>5/22/2014 3:09:00 PM</RecordDate>
+                        <ind_int_code />
+                    </Result>
+                </Results>
+            </GetCustomerByKeyResult>
+        </GetCustomerByKeyResponse>
+    </soap:Body>
+</soap:Envelope>

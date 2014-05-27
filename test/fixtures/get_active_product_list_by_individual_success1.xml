@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Header>
+        <AuthorizationToken xmlns="http://www.avectra.com/OnDemand/2005/">
+            <Token>ae4533f3-05dd-48e5-b7cd-e10a59a9d4ff</Token>
+        </AuthorizationToken>
+    </soap:Header>
+    <soap:Body>
+        <GetActiveProductListByIndividualResponse xmlns="http://www.avectra.com/OnDemand/2005/">
+            <GetActiveProductListByIndividualResult>
+                <Results userName="tammyxweb" recordReturn="1">
+                    <Result>
+                        <add_date>10/23/2009 12:05:28 PM</add_date>
+                        <cst_key>447200c9-e5fc-4188-8b9f-cb64b70eb323</cst_key>
+                        <prd_key>669f3f1e-0a96-44a4-8f11-59ac0b842371</prd_key>
+                        <prd_code>NATW_CONVENTION</prd_code>
+                        <prd_name>NATW Conference 2010</prd_name>
+                        <mer_category />
+                        <prd_type>Event</prd_type>
+                        <prd_add_Date>9/4/2009 11:51:06 AM</prd_add_Date>
+                        <prd_post_online_flag>1</prd_post_online_flag>
+                        <prd_post_to_web_date />
+                        <prd_remove_from_web_date />
+                        <prd_start_date />
+                        <prd_end_date />
+                    </Result>
+                </Results>
+            </GetActiveProductListByIndividualResult>
+        </GetActiveProductListByIndividualResponse>
+    </soap:Body>
+</soap:Envelope>
