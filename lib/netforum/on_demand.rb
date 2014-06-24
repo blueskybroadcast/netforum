@@ -26,8 +26,12 @@ module Netforum
       get_object('get_event_by_key', {szKey: event_key}, Event, output_name: 'get_event_list_by_key')
     end
 
+    def get_event_by_product_key(product_key)
+      get_object('get_event_by_product_key', {szKey: product_key}, Event)
+    end
+
     def get_event_fees_by_event_key(event_key, options={})
-      default_params = {szEventKey: event_key, szSessionKey: nil, szAvailableAsOfDate: nil, bOnlineOnly: 'false',  bExcludeInactive: 'false'}
+      default_params = {szEventkey: event_key, szSessionKey: nil, szAvailableAsOfDate: nil, bOnlineOnly: 'false',  bExcludeInactive: 'false'}
       get_array('get_event_fees_by_event_key', default_params.merge(options), EventFee)
     end
 
