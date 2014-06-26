@@ -8,6 +8,7 @@ require "netforum/customer_event"
 require "netforum/event"
 require "netforum/event_fee"
 require "netforum/price"
+require "netforum/registrant"
 
 module Netforum
 

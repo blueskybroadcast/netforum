@@ -39,6 +39,11 @@ module Netforum
       get_array('get_prices_by_product_key', {prdkey: product_key}, Price)
     end
 
+    def get_registrants_by_key(event_key, options={})
+       default_params = {eventkey: event_key, firstname: nil, lastname: nil, orgname: nil, regid:nil}
+       get_array('get_registrants_by_key', default_params.merge(options), Registrant)
+    end
+
     private
 
     def client
