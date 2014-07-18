@@ -67,11 +67,4 @@ class OnDemandTest < MiniTest::Test
 
     refute_empty events
   end
-
-a = Netforum.authenticate('blueskyxweb', 'jx3zXy3C')
-o = Netforum.on_demand(a.authentication_token)
-# o.get_customer_by_key('61d2e6df-a03c-4887-89d7-24eae05488b6')
-
-# o.get_customer_event('61d2e6df-a03c-4887-89d7-24eae05488b6')
-# o.get_customer_event('ec8f7ac3-4a05-416d-9cf0-c447d4348c54')
 end

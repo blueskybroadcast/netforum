@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ConfigurationTest < MiniTest::Test
+class AuthenticationTest < MiniTest::Test
   def setup
     stub_authentication_wsdl
   end

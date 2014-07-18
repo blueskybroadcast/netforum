@@ -9,8 +9,8 @@ module Netforum
     end
 
     def self.client_options(value=nil)
-      #@client_options = value || @client_options || {}
-      @client_options = value || @client_options || {log: true, log_level: :info, logger: DebugLogger}
+      #@client_options = value || @client_options || {log: true, log_level: :info, logger: DebugLogger}
+      @client_options = value || @client_options || {}
     end
 
     def self.reset(*properties)
