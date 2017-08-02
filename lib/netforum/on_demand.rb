@@ -1,6 +1,6 @@
 module Netforum
   class OnDemand
-    attr_reader :authentication_token
+    attr_reader :authentication_token, :last_request, :last_response
 
     def initialize(authentication_token)
       @authentication_token = authentication_token
@@ -58,7 +58,10 @@ module Netforum
     end
 
     def get_array(service, params, klass, options={})
-      response = client.call(service.to_sym, message: params)
+      operation = client.operation(service.to_sym)
+      response = operation.call(message: params)
+      @last_request = operation.raw_request
+      @last_response = operation.raw_response
       set_auth_token(response)
 
       return_list = []
@@ -76,10 +79,17 @@ module Netforum
       end
 
       return_list
+    rescue Savon::SOAPFault => e
+      @last_request ||= operation.raw_request
+      @last_response = e.http
+      []
     end
 
     def get_object(service, params, klass, options={})
-      response = client.call(service.to_sym, message: params)
+      operation = client.operation(service.to_sym)
+      response = operation.call(message: params)
+      @last_request = operation.raw_request
+      @last_response = operation.raw_response
       set_auth_token(response)
 
       output_name = options[:output_name] || service
@@ -89,6 +99,10 @@ module Netforum
       else
         nil
       end
+    rescue Savon::SOAPFault => e
+      @last_request ||= operation.raw_request
+      @last_response = e.http
+      nil
     end
 
     def set_auth_token(response)

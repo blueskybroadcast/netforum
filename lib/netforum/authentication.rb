@@ -3,6 +3,8 @@ require 'httpclient'
 
 module Netforum
   class Authentication
+    attr_reader :last_request, :last_response
+
     def initialize(username, password)
       @auth_token = nil
       @username = username
@@ -11,10 +13,15 @@ module Netforum
 
     def authenticate
       begin
-        response = client.call(:authenticate, message: {'userName' => @username, 'password' => @password})
+        operation = client.operation(:authenticate)
+        response = operation.call(message: { 'userName' => @username, 'password' => @password })
+        @last_request = operation.raw_request
+        @last_response = operation.raw_response
         @auth_token = response.body[:authenticate_response][:authenticate_result]
         true
       rescue Savon::SOAPFault => e
+        @last_request ||= operation.raw_request
+        @last_response = e.http
         @auth_token = nil
         false
       end
@@ -30,19 +37,33 @@ module Netforum
     end
 
     def get_customer_key(sign_on_token)
-      authenticate unless authenticated?
-      response = client.call(:get_cst_key_from_sign_on_token, message: {'AuthToken' => authentication_token, 'szEncryptedSingOnToken' => sign_on_token})
-      if response.success?
-        response.body[:get_cst_key_from_sign_on_token_response][:get_cst_key_from_sign_on_token_result]
+      begin
+        authenticate unless authenticated?
+        operation = client.operation(:get_cst_key_from_sign_on_token)
+        response = operation.call(message: { 'AuthToken' => authentication_token, 'szEncryptedSingOnToken' => sign_on_token })
+        @last_request = operation.raw_request
+        @last_response = operation.raw_response
+        if response.success?
+          response.body[:get_cst_key_from_sign_on_token_response][:get_cst_key_from_sign_on_token_result]
+        end
+      rescue Savon::SOAPFault => e
+        @last_request ||= operation.raw_request
+        @last_response = e.http
+        nil
       end
     end
 
     def get_sign_on_token(username, password, expires_in=60)
       begin
         authenticate unless authenticated?
-        response = client.call(:get_sign_on_token, message: {'Email' => username, 'Password' => password, 'AuthToken' => authentication_token, 'Minutes' => expires_in})
+        operation = client.operation(:get_sign_on_token)
+        response = operation.call(message: { 'Email' => username, 'Password' => password, 'AuthToken' => authentication_token, 'Minutes' => expires_in })
+        @last_request = operation.raw_request
+        @last_response = operation.raw_response
         response.body[:get_sign_on_token_response][:get_sign_on_token_result].gsub('ssoToken=', '')
       rescue Savon::SOAPFault => e
+        @last_request ||= operation.raw_request
+        @last_response = e.http
         nil
       end
     end
