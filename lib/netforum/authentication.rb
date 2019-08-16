@@ -4,11 +4,13 @@ require 'httpclient'
 module Netforum
   class Authentication
     attr_reader :last_request, :last_response
+    attr_accessor :read_timeout
 
     def initialize(username, password)
       @auth_token = nil
       @username = username
       @password = password
+      @read_timeout = nil
     end
 
     def authenticate
@@ -71,7 +73,9 @@ module Netforum
     private
 
     def client
-      Savon.client(Configuration.client_options) do |globals|
+      options = Configuration.client_options
+      options.merge!(read_timeout: read_timeout) if read_timeout.present?
+      Savon.client(options) do |globals|
         globals.wsdl Configuration.authentication_wsdl
 
         # override endpoint address so http schemes match
