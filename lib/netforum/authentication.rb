@@ -6,12 +6,12 @@ module Netforum
     attr_reader :last_request, :last_response
     attr_accessor :read_timeout, :open_timeout
 
-    def initialize(username, password)
+    def initialize(username, password, opts = {})
       @auth_token = nil
       @username = username
       @password = password
-      @read_timeout = nil
-      @open_timeout = nil
+      @read_timeout = opts[:read_timeout].presence
+      @open_timeout = opts[:open_timeout].presence
     end
 
     def authenticate

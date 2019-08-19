@@ -16,8 +16,8 @@ module Netforum
     Configuration.class_eval(&block)
   end
 
-  def self.authenticate(username, password)
-    auth = Authentication.new(username, password)
+  def self.authenticate(username, password, opts = {})
+    auth = Authentication.new(username, password, opts)
     if auth.authenticate
       auth
     else
