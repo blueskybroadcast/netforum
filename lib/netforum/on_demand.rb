@@ -50,11 +50,12 @@ module Netforum
     private
 
     def client
-      options = Configuration.client_options.merge(soap_header: {'tns:AuthorizationToken' => {'tns:Token' => authentication_token}})
+      return @client if defined?(@client)
+
       options[:read_timeout] = read_timeout if read_timeout.present?
       options[:open_timeout] = open_timeout if open_timeout.present?
 
-      Savon.client(options) do |globals|
+      @client = Savon.client(options) do |globals|
         globals.wsdl Configuration.on_demand_wsdl
 
         # override endpoint address so http schemes match what is in WSDL
@@ -64,7 +65,7 @@ module Netforum
 
     def get_array(service, params, klass, options={})
       operation = client.operation(service.to_sym)
-      response = operation.call(message: params)
+      response = operation.call(message: params, soap_header: {'tns:AuthorizationToken' => {'tns:Token' => authentication_token}})
       @last_request = operation.raw_request
       @last_response = operation.raw_response
       set_auth_token(response)
@@ -92,7 +93,7 @@ module Netforum
 
     def get_object(service, params, klass, options={})
       operation = client.operation(service.to_sym)
-      response = operation.call(message: params)
+      response = operation.call(message: params, soap_header: {'tns:AuthorizationToken' => {'tns:Token' => authentication_token}})
       @last_request = operation.raw_request
       @last_response = operation.raw_response
       set_auth_token(response)
