@@ -1,9 +1,12 @@
 module Netforum
   class OnDemand
     attr_reader :authentication_token, :last_request, :last_response
+    attr_accessor :read_timeout, :open_timeout
 
     def initialize(authentication_token)
       @authentication_token = authentication_token
+      @read_timeout = nil
+      @open_timeout = nil
     end
 
     def get_active_product_list(date_since=nil)
@@ -48,6 +51,8 @@ module Netforum
 
     def client
       options = Configuration.client_options.merge(soap_header: {'tns:AuthorizationToken' => {'tns:Token' => authentication_token}})
+      options[:read_timeout] = read_timeout if read_timeout.present?
+      options[:open_timeout] = open_timeout if open_timeout.present?
 
       Savon.client(options) do |globals|
         globals.wsdl Configuration.on_demand_wsdl
