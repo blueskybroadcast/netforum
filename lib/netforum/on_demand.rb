@@ -52,6 +52,7 @@ module Netforum
     def client
       return @client if defined?(@client)
 
+      options = Configuration.client_options
       options[:read_timeout] = read_timeout if read_timeout.present?
       options[:open_timeout] = open_timeout if open_timeout.present?
 
