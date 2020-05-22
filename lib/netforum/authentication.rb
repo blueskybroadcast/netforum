@@ -23,7 +23,7 @@ module Netforum
         @auth_token = response.body[:authenticate_response][:authenticate_result]
         true
       rescue Savon::SOAPFault => e
-        @last_request ||= operation.raw_request
+        @last_request ||= operation&.raw_request
         @last_response = e.http
         @auth_token = nil
         false
@@ -50,7 +50,7 @@ module Netforum
           response.body[:get_cst_key_from_sign_on_token_response][:get_cst_key_from_sign_on_token_result]
         end
       rescue Savon::SOAPFault => e
-        @last_request ||= operation.raw_request
+        @last_request ||= operation&.raw_request
         @last_response = e.http
         nil
       end
@@ -65,7 +65,7 @@ module Netforum
         @last_response = operation.raw_response
         response.body[:get_sign_on_token_response][:get_sign_on_token_result].gsub('ssoToken=', '')
       rescue Savon::SOAPFault => e
-        @last_request ||= operation.raw_request
+        @last_request ||= operation&.raw_request
         @last_response = e.http
         nil
       end
